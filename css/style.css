@@ -67,6 +67,10 @@ body {
     margin: 0 auto;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     width: 89%;
     margin: 0 auto;
@@ -137,7 +141,7 @@ nav ul li:last-child {
     border: 1px solid red;
 }
 
-section {
+.firstSection {
     background: linear-gradient(to bottom, rgba(248,248,248,1) 0%,
                                            rgba(246,246,246,1) 59%,
                                            rgba(207,207,215,1) 100%);
@@ -196,24 +200,216 @@ section {
 
 }
 
+/*----------DRUGA SEKCJA-------------*/
+
+.secondSection {
+    height: 350px;
+    border: 1px solid orange;
+}
+
+.secondSection article {
+    /*border: 1px solid orange;*/
+    height: 227px;
+    width: 332px;
+    float: left;
+    margin-top: 27px;
+    margin-right: 26px;
+}
 
 
+.secondSection article:first-child {
+    background-image: url('../images/box1_img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secondSection article:nth-child(2) {
+    background-image: url('../images/box2_img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secondSection article:last-child {
+    margin-right: 0;
+    height: 254px;
+    width: 340px;
+    border: 1px solid #F1F1F1;
+}
+
+.secondSection h2 {
+    border-bottom: 7px solid #24BA9F;
+    width: 138px;
+    display: block;
+    font-size: 16px;
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+.text-background {
+    margin-top: 149px;
+    width: 332px;
+    height: 64px;
+    background-color: rgba(244, 249, 255, 0.35);
+    /*border: 1px solid green;*/
+}
+
+.chairName {
+    text-transform: uppercase;
+}
+
+.secondSection article:last-child h2 {
+    margin-top: 14px;
+    margin-left: 22px;
+}
+
+.secondSection article:last-child p {
+    margin-left: 22px;
+    margin-top: 13px;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.secondSection article:last-child p:last-child {
+    margin-top: 17px;
+}
+
+/*----------TRZECIA SEKCJA---------*/
+
+.priceList {
+    height: 725px;
+    border: 1px solid green;
+    background-color: #F1F1F1;
+}
+
+.priceList h2 {
+    text-transform: uppercase;
+    margin-top: 38px;
+    width: 321px;
+    line-height: 38px;
+    border-bottom: 7px solid #24BA9F;
+}
+
+.priceList article {
+    /*border: 1px solid orange;*/
+    width: 329px;
+    height: 500px;
+    margin-top: 75px;
+    float: left;
+    margin-right: 32px;
+}
+
+.priceList .basic {
+    background-color: #F9F9F9;
+}
+
+.priceList article:nth-child(4) {
+    margin-right: 0;
+}
+
+.plan {
+    /*border: 1px solid red;*/
+    height: 218px;
+    text-align: center;
+}
+
+.basic .plan {
+    background-color: #F9F9F9;
+}
+
+.plan h3 {
+    margin-top: 27px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 100;
+    word-spacing: 3px;
+}
+
+.features ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features ul li {
+    /*border: 1px solid green;*/
+    height: 45px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 24px;
+    color: #8C8C8C;
+    width: 325px;
+    display: inline-block;
+}
+
+.features ul li:first-child {
+    background-color: #E4E4E4;
+}
+
+.features ul li:nth-child(2) {
+    background-color: #F1F1F1;
+}
+
+.basic ul li:nth-child(n+3) {
+    display: none;
+}
+
+.features {
+    text-align: center;
+}
+
+.features input {
+    margin-top: 110px;
+    width: 123px;
+    line-height: 1em;
+    height: 33px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #27c7ab;
+    border: 1px solid #27c7ab;
+    border-radius: 8px;
+}
+
+.priceList .basic {
+    background-color: #F9F9F9;
+}
+
+.priceList .basic {
+    border: 2px solid #D6D6D6;
+}
 
 
+/*----------DRUGI PANEL - STANDARD PLAN--------*/
 
+.priceList .standard {
+    background-color: #27C7AB;
+}
 
+.standard h3 {
+    color: #fff;
+}
 
+.standard ul li:first-child {
+    background-color: #fff;
+}
 
+.standard ul li:nth-child(2) {
+    background-color: #F1F1F1;
+}
 
+.standard ul li:nth-child(3) {
+    background-color: #fff;
+}
 
+.standard ul li:nth-child(4) {
+    display: none;
+}
 
-
-
-
-
-
-
-
+.standard .features input {
+    margin-top: 67px;
+    background-color: #fff;
+    color: #27C7AB;
+}
 
 
 
