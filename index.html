@@ -11,37 +11,45 @@
             <h1>Sit <span class="accent">on</span> chair</h1>
             <nav>
                 <ul>
-                    <li>O firmie</li>
-                    <li>Galeria</li>
-                    <li>Kontakt</li>
+                    <li><a href="">O firmie</a></li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <section class="firstSection">
         <div class="container">
+            <a href="">
             <div class="less accent">&lt</div>
+            </a>
             <div class="chair_photo"></div>
             <article class="banner">
                 <h2>Sit <span class="accent">on </span>our <span class="accent">chair</span></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut faucibus diam. Duis mollis tempus dui vel scelerisque. In semper a orci commodo varius. Donec a diam interdum, fermentum nisl in, porta ante. </p>
                 <input type="submit" value="ZOBACZ WIĘCEJ">
             </article>
+            <a href="">
             <div class="more accent">&gt</div>
-        </div>
+            </a>
+            </div>
     </section>
 
     <section class="secondSection">
         <div class="container">
             <article>
+                <a href="">
                 <div class="text-background">
                 <h2>Chair <span class="chairName">Clair</span></h2>
                 </div>
+                </a>
             </article>
             <article>
+                <a href="">
                 <div class="text-background">
                 <h2>Chair <span class="chairName">Margarita</span></h2>
                 </div>
+                </a>
             </article>
 
             <article>
@@ -58,7 +66,7 @@
             <article class="basic">
                 <div class="plan">
                     <h3 class="accent">Basic plan</h3>
-                    <div class="basicPrice">8599 PLN/MSC
+                    <div class="basicPrice priceTag">85 <span class="grosze">99</span></br><span class="grosze">PLN/MSC</span>
                     </div>
                 </div>
                 <div class="features">
@@ -74,7 +82,7 @@
             <article class="standard">
                 <div class="plan">
                     <h3>Standard plan</h3>
-                    <div class="price">9599 PLN/MSC
+                    <div class="price priceTag">95 <span class="grosze">99</span></br><span class="grosze">PLN/MSC</span>
                     </div>
                 </div>
                 <div class="features">
@@ -87,10 +95,10 @@
                     <input type="button" value="Dołącz">
                 </div>
             </article>
-            <article class="advance">
+            <article class="advanced">
                 <div class="plan">
-                    <h3 class="accent">Basic plan</h3>
-                    <div class="basicPrice">8599 PLN/MSC
+                    <h3 class="accent">Advance plan</h3>
+                    <div class="basicPrice priceTag">211 <span class="grosze">00</span></br><span class="grosze">PLN/MSC</span>
                     </div>
                 </div>
                 <div class="features">
@@ -105,6 +113,27 @@
             </article>
         </div>
     </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <form action="">
+                <input type="text" name="name" placeholder="Imię">
+                <input type="email" name="email" placeholder="email">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Wiadomość"></textarea>
+            </form>
+            <div class="send"></div>
+            <div class="sendButton">
+                <div class="redChair"></div>
+                <div class="innerContainer">
+                <input type="checkbox" name="consent">
+                <label for="consent">Zgadzam się na przetwarzanie danych osobowych</label>
+                </div>
+                <input type="submit" value="Wyślij">
+            </div>
+        </div>
+    </section>
+
 
 </body>
 </html>

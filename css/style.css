@@ -71,6 +71,11 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     width: 89%;
     margin: 0 auto;
@@ -117,6 +122,11 @@ nav ul li {
     font-size: 13px;
     font-weight: bold;
     padding: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
 }
 
 nav ul li:last-child {
@@ -223,6 +233,7 @@ nav ul li:last-child {
     background-repeat: no-repeat;
 }
 
+
 .secondSection article:nth-child(2) {
     background-image: url('../images/box2_img.jpg');
     background-position: center;
@@ -325,6 +336,33 @@ nav ul li:last-child {
     word-spacing: 3px;
 }
 
+.priceTag {
+    font-size: 43px;
+    font-weight: bold;
+    margin-top: 27px;
+    position: relative;
+    border: 2px solid #D4D4D4;
+    display: inline-block;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    background-color: #fff;
+    color: #C1C1C1;
+    padding-top: 27px;
+}
+
+.standard .priceTag {
+    color: #27c7ab;
+}
+
+.grosze {
+    font-size: 14px;
+    position: relative;
+    top: -25px;
+    left: 0;
+}
+
+
 .features ul {
     margin: 0 auto;
     text-align: center;
@@ -406,12 +444,188 @@ nav ul li:last-child {
 }
 
 .standard .features input {
-    margin-top: 67px;
+    margin-top: 70px;
     background-color: #fff;
     color: #27C7AB;
 }
 
 
+/*--------DRUGI PANEL ADVANCED PLAN----------*/
+
+.priceList .advanced {
+    border: 2px solid #D6D6D6;
+    background-color: #F9F9F9;
+}
+
+.advanced .features input {
+    margin-top: 20px;
+}
+
+.advanced ul li:nth-child(odd) {
+    background-color: #E4E4E4;
+}
+
+.advanced ul li:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+
+/*----------CONTACT----------------*/
+
+.contact {
+    height: 654px;
+    border: 1px solid purple;
+}
+
+.contact h2 {
+    text-transform: uppercase;
+    margin-top: 27px;
+    margin-left: 8px;
+    letter-spacing: -1px;
+    width: 321px;
+    line-height: 38px;
+    border-bottom: 7px solid #24BA9F;
+}
+
+.contact form {
+    width: 634px;
+    border: 1px solid violet;
+    margin-left: 7px;
+    margin-top: 44px;
+    float: left;
+}
+
+::placeholder {
+    color: #CBCBCB;
+    font-size: 32px;
+    margin-top: 3px;
+}
+
+input[type="text"] {
+    color: #CBCBCB;
+    width: 633px;
+    height: 65px;
+    margin-bottom: 26px;
+    font-size: 32px;
+    text-indent: 11px;
+}
+
+input[type="email"] {
+    color: #CBCBCB;
+    width: 633px;
+    height: 65px;
+    font-size: 32px;
+    text-indent: 11px;
+    margin-bottom: 26px;
+}
+
+textarea {
+    width: 633px;
+    height: 190px;
+    font-size: 32px;
+    color: #CBCBCB;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+
+
+button, input, select, textarea {
+    font-family : inherit;
+    font-size   : 100%;
+}
+
+
+/*----------SEND BUTTON SECTION--------*/
+
+.sendButton {
+    float: right;
+    width: 374px;
+    height: 394px;
+    border: 1px solid orange;
+    margin-top: 28px;
+    margin-right: 13px;
+    position: relative;
+    /*text-align: center;*/
+}
+
+.redChair {
+    border: 1px solid red;
+    height: 225px;
+    background-image: url(../images/red_chair.png);
+    background-position: center;
+    background-size: 72%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    text-align: center;
+}
+
+.innerContainer {
+    text-align: center;
+    width: 95%;
+}
+
+.sendButton input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    margin-top: 29px;
+    width: 342px;
+    height: 71px;
+    color: #fff;
+    background-color: #27c7ab;
+    border: 1px solid #27c7ab;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-weight: 800;
+    outline: none;
+}
+
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 1px solid #24BA9F;
+    padding: 24px;
+    margin-left: 15px;
+    margin-top: 4px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+
+
+input[type="checkbox"]:checked {
+    background-color: #fff;
+    border: 2px solid #24BA9F;
+    /*box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);*/
+    color: #24BA9F;
+}
+
+input[type="checkbox"]:checked:after {
+    content: '\2714';
+    font-size: 43px;
+    position: absolute;
+    top: -4px;
+    left: 6px;
+    color: #24BA9F;
+}
+
+label {
+    /*border: 1px solid red;*/
+    display: inline-block;
+    width: 282px;
+    position: relative;
+    top: -8px;
+    font-size: 19px;
+}
 
 
 
