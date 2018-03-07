@@ -140,7 +140,7 @@ nav ul li:last-child {
     margin-top: 200px;
     font-weight: 100;
     font-size: 90px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .more {
@@ -148,7 +148,7 @@ nav ul li:last-child {
     margin-top: 200px;
     font-weight: 100;
     font-size: 90px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .firstSection {
@@ -167,11 +167,11 @@ nav ul li:last-child {
     width: 420px;
     float: left;
     margin-top: 70px;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 .banner {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     height: 420px;
     width: 432px;
     margin-top: 70px;
@@ -207,14 +207,14 @@ nav ul li:last-child {
     background-color: #24BA9F;
     border: 2px solid #24BA9F;
     border-radius: 10px;
-
+    cursor: pointer;
 }
 
 /*----------DRUGA SEKCJA-------------*/
 
 .secondSection {
     height: 350px;
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
 }
 
 .secondSection article {
@@ -289,7 +289,7 @@ nav ul li:last-child {
 
 .priceList {
     height: 725px;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     background-color: #F1F1F1;
 }
 
@@ -406,6 +406,7 @@ nav ul li:last-child {
     background-color: #27c7ab;
     border: 1px solid #27c7ab;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .priceList .basic {
@@ -473,8 +474,8 @@ nav ul li:last-child {
 /*----------CONTACT----------------*/
 
 .contact {
-    height: 654px;
-    border: 1px solid purple;
+    height: 550px;
+    /*border: 1px solid purple;*/
 }
 
 .contact h2 {
@@ -489,7 +490,7 @@ nav ul li:last-child {
 
 .contact form {
     width: 634px;
-    border: 1px solid violet;
+    /*border: 1px solid violet;*/
     margin-left: 7px;
     margin-top: 44px;
     float: left;
@@ -541,7 +542,7 @@ button, input, select, textarea {
     float: right;
     width: 374px;
     height: 394px;
-    border: 1px solid orange;
+    /*border: 1px solid orange;*/
     margin-top: 28px;
     margin-right: 13px;
     position: relative;
@@ -549,7 +550,7 @@ button, input, select, textarea {
 }
 
 .redChair {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     height: 225px;
     background-image: url(../images/red_chair.png);
     background-position: center;
@@ -567,9 +568,8 @@ button, input, select, textarea {
 }
 
 .sendButton input[type="submit"] {
-    margin: 0 auto;
+    margin: 39px auto 0 auto;
     display: block;
-    margin-top: 29px;
     width: 342px;
     height: 71px;
     color: #fff;
@@ -583,52 +583,103 @@ button, input, select, textarea {
 }
 
 
+/*---------Checkbox-------------*/
 
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    background-color: #fff;
-    border: 1px solid #24BA9F;
-    padding: 24px;
-    margin-left: 15px;
-    margin-top: 4px;
-    border-radius: 3px;
+input[type=checkbox].css-checkbox {
+    position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 70px;
+    padding-top: 10px;
     display: inline-block;
-    position: relative;
+    line-height: 22px;
+    background-repeat: no-repeat;
+    background-position: 11px 2px;
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    /*border: 1px solid green;*/
+    height: 53px;
 }
 
-input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-
-
-
-input[type="checkbox"]:checked {
-    background-color: #fff;
-    border: 2px solid #24BA9F;
-    /*box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);*/
-    color: #24BA9F;
-}
-
-input[type="checkbox"]:checked:after {
-    content: '\2714';
-    font-size: 43px;
-    position: absolute;
-    top: -4px;
-    left: 6px;
-    color: #24BA9F;
-}
-
-label {
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 11px -48px;
     /*border: 1px solid red;*/
-    display: inline-block;
-    width: 282px;
-    position: relative;
-    top: -8px;
-    font-size: 19px;
+    height: 53px;
+}
+label.css-label {
+    background-image:url(../images/tickFinal.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
 
+/*----------Footer---------------*/
+
+.footer {
+    height: 105px;
+    /*border: 1px solid green;*/
+}
+
+.footerLeft {
+    float: left;
+    margin-top: 36px;
+    letter-spacing: 0.9px;
+}
+
+.icons {
+    float: right;
+    /*border: 1px solid red;*/
+    height: 100px;
+    padding-top: 22px;
+    padding-right: 65px;
+}
+
+.footerRight {
+    float: right;
+    /*border: 1px solid red;*/
+    height: 100px;
+    padding-top: 31px;
+    padding-right: 11px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.83px;
+}
+
+.icon1 {
+    content: url(../images/flickr.png);
+    height: 35px;
+    width: 35px;
+    /*border: 3px solid blue;*/
+}
+
+.icon2 {
+    content: url(../images/vimeo.png);
+    height: 35px;
+    width: 35px;
+    /*border: 3px solid blue;*/
+}
+
+.icon3 {
+    content: url(../images/pinterest.png);
+    height: 35px;
+    width: 35px;
+    /*border: 3px solid blue;*/
+}
+
+.icon4 {
+    content: url(../images/twitter.png);
+    height: 35px;
+    width: 35px;
+    /*border: 3px solid blue;*/
+}
 
 
 
