@@ -133,6 +133,18 @@ nav ul li:last-child {
     padding-right: 0;
 }
 
+/*----------ROZWIJANA CZĘŚć NAWIGACJI---------*/
+
+
+
+.dropdown > ul {
+    display: hidden;
+}
+
+
+
+
+
 /*------------PIERWSZA SEKCJA-----------*/
 
 .less {
