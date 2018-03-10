@@ -86,11 +86,8 @@ a {
     font-weight: 800;
 }
 
-
 /*-------HEADER--------*/
 header {
-    /*color: red;*/
-    /*border: 5px solid red;*/
     background-color: #000;
     color: #fff;
     height: 41px;
@@ -100,20 +97,17 @@ header {
 h1 {
     font-size: 14px;
     font-weight: 300;
-    /*border: 1px solid blue;*/
-    /*float: left;*/
     display: inline-block;
     line-height: 41px;
-    /*padding-left: 68px;*/
 }
 
-
-
 nav {
-    /*border: 1px solid blue;*/
     float: right;
-    /*padding-right: 65px;*/
     letter-spacing: 2px;
+}
+
+nav ul {
+    position: relative;
 }
 
 nav ul li {
@@ -135,32 +129,62 @@ nav ul li:last-child {
 
 /*----------ROZWIJANA CZĘŚć NAWIGACJI---------*/
 
-
-
-.dropdown > ul {
-    display: hidden;
+#dropdown {
+    display: none;
+    top: 42px;
+    left: 0;
+    z-index: 1;
+    text-transform: none;
+    font-weight: 100;
+    line-height: 1em;
 }
 
+#dropdown li {
+    height: 32.5px;
+    line-height: 2.5em;
+    display: block;
+    background-color: black;
+    width: 123px;
+}
 
+#dropdown a {
+    font-size: 14px;
+    letter-spacing: 0;
+    font-weight: 600;
+}
 
+ul.menu li:hover ul#dropdown{
+    display: block;
+    position: absolute;
+}
 
+ul.menu li:hover > ul#dropdown::before {
+    display: block;
+    position: relative;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+    margin: 0 auto;
+}
 
 /*------------PIERWSZA SEKCJA-----------*/
 
-.less {
-    float: left;
+.less,
+.more {
     margin-top: 200px;
     font-weight: 100;
     font-size: 90px;
-    /*border: 1px solid red;*/
+}
+
+.less {
+    float: left;
 }
 
 .more {
     float: right;
-    margin-top: 200px;
-    font-weight: 100;
-    font-size: 90px;
-    /*border: 1px solid red;*/
 }
 
 .firstSection {
@@ -179,11 +203,9 @@ nav ul li:last-child {
     width: 420px;
     float: left;
     margin-top: 70px;
-    /*border: 2px solid red;*/
 }
 
 .banner {
-    /*border: 1px solid red;*/
     height: 420px;
     width: 432px;
     margin-top: 70px;
@@ -193,13 +215,11 @@ nav ul li:last-child {
 }
 
 .banner h2 {
-    /*border: 1px solid blue;*/
     text-align: center;
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 400;
     margin-top: 63px;
-    /*letter-spacing: 1px;*/
 }
 
 .banner p {
@@ -220,17 +240,16 @@ nav ul li:last-child {
     border: 2px solid #24BA9F;
     border-radius: 10px;
     cursor: pointer;
+    width: 260px;
 }
 
 /*----------DRUGA SEKCJA-------------*/
 
 .secondSection {
     height: 350px;
-    /*border: 1px solid orange;*/
 }
 
 .secondSection article {
-    /*border: 1px solid orange;*/
     height: 227px;
     width: 332px;
     float: left;
@@ -238,13 +257,11 @@ nav ul li:last-child {
     margin-right: 26px;
 }
 
-
 .secondSection article:first-child {
     background-image: url('../images/box1_img.jpg');
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 .secondSection article:nth-child(2) {
     background-image: url('../images/box2_img.jpg');
@@ -273,7 +290,6 @@ nav ul li:last-child {
     width: 332px;
     height: 64px;
     background-color: rgba(244, 249, 255, 0.35);
-    /*border: 1px solid green;*/
 }
 
 .chairName {
@@ -301,7 +317,6 @@ nav ul li:last-child {
 
 .priceList {
     height: 725px;
-    /*border: 1px solid green;*/
     background-color: #F1F1F1;
 }
 
@@ -314,7 +329,6 @@ nav ul li:last-child {
 }
 
 .priceList article {
-    /*border: 1px solid orange;*/
     width: 329px;
     height: 500px;
     margin-top: 75px;
@@ -331,7 +345,6 @@ nav ul li:last-child {
 }
 
 .plan {
-    /*border: 1px solid red;*/
     height: 218px;
     text-align: center;
 }
@@ -374,14 +387,12 @@ nav ul li:last-child {
     left: 0;
 }
 
-
 .features ul {
     margin: 0 auto;
     text-align: center;
 }
 
 .features ul li {
-    /*border: 1px solid green;*/
     height: 45px;
     text-align: center;
     line-height: 38px;
@@ -423,12 +434,8 @@ nav ul li:last-child {
 
 .priceList .basic {
     background-color: #F9F9F9;
-}
-
-.priceList .basic {
     border: 2px solid #D6D6D6;
 }
-
 
 /*----------DRUGI PANEL - STANDARD PLAN--------*/
 
@@ -462,7 +469,6 @@ nav ul li:last-child {
     color: #27C7AB;
 }
 
-
 /*--------DRUGI PANEL ADVANCED PLAN----------*/
 
 .priceList .advanced {
@@ -482,12 +488,10 @@ nav ul li:last-child {
     background-color: #F1F1F1;
 }
 
-
 /*----------CONTACT----------------*/
 
 .contact {
     height: 550px;
-    /*border: 1px solid purple;*/
 }
 
 .contact h2 {
@@ -502,7 +506,6 @@ nav ul li:last-child {
 
 .contact form {
     width: 634px;
-    /*border: 1px solid violet;*/
     margin-left: 7px;
     margin-top: 44px;
     float: left;
@@ -514,39 +517,30 @@ nav ul li:last-child {
     margin-top: 3px;
 }
 
-input[type="text"] {
+input,
+textarea {
     color: #CBCBCB;
     width: 633px;
-    height: 65px;
-    margin-bottom: 26px;
     font-size: 32px;
-    text-indent: 11px;
 }
 
-input[type="email"] {
-    color: #CBCBCB;
-    width: 633px;
+input[type=text],
+input[type=email] {
     height: 65px;
-    font-size: 32px;
     text-indent: 11px;
     margin-bottom: 26px;
 }
 
 textarea {
-    width: 633px;
     height: 190px;
-    font-size: 32px;
-    color: #CBCBCB;
     padding-top: 12px;
     padding-left: 12px;
 }
-
 
 button, input, select, textarea {
     font-family : inherit;
     font-size   : 100%;
 }
-
 
 /*----------SEND BUTTON SECTION--------*/
 
@@ -554,15 +548,12 @@ button, input, select, textarea {
     float: right;
     width: 374px;
     height: 394px;
-    /*border: 1px solid orange;*/
     margin-top: 28px;
     margin-right: 13px;
     position: relative;
-    /*text-align: center;*/
 }
 
 .redChair {
-    /*border: 1px solid red;*/
     height: 225px;
     background-image: url(../images/red_chair.png);
     background-position: center;
@@ -594,7 +585,6 @@ button, input, select, textarea {
     outline: none;
 }
 
-
 /*---------Checkbox-------------*/
 
 input[type=checkbox].css-checkbox {
@@ -611,32 +601,22 @@ input[type=checkbox].css-checkbox + label.css-label {
     font-size: 20px;
     vertical-align: middle;
     cursor: pointer;
-    /*border: 1px solid green;*/
     height: 53px;
 }
 
 input[type=checkbox].css-checkbox:checked + label.css-label {
     background-position: 11px -48px;
-    /*border: 1px solid red;*/
     height: 53px;
 }
 label.css-label {
     background-image:url(../images/tickFinal.png);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
-
-
 
 /*----------Footer---------------*/
 
 .footer {
     height: 105px;
-    /*border: 1px solid green;*/
 }
 
 .footerLeft {
@@ -645,18 +625,18 @@ label.css-label {
     letter-spacing: 0.9px;
 }
 
-.icons {
+.icons,
+.footerRight {
     float: right;
-    /*border: 1px solid red;*/
     height: 100px;
+}
+
+.icons {
     padding-top: 22px;
     padding-right: 65px;
 }
 
 .footerRight {
-    float: right;
-    /*border: 1px solid red;*/
-    height: 100px;
     padding-top: 31px;
     padding-right: 11px;
     text-transform: uppercase;
@@ -665,35 +645,29 @@ label.css-label {
     letter-spacing: 0.83px;
 }
 
-.icon1 {
-    content: url(../images/flickr.png);
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
     height: 35px;
     width: 35px;
-    /*border: 3px solid blue;*/
+}
+
+.icon1 {
+    content: url(../images/flickr.png);
 }
 
 .icon2 {
     content: url(../images/vimeo.png);
-    height: 35px;
-    width: 35px;
-    /*border: 3px solid blue;*/
 }
 
 .icon3 {
     content: url(../images/pinterest.png);
-    height: 35px;
-    width: 35px;
-    /*border: 3px solid blue;*/
 }
 
 .icon4 {
     content: url(../images/twitter.png);
-    height: 35px;
-    width: 35px;
-    /*border: 3px solid blue;*/
 }
-
-
 
 /*------CLEARFIX-------*/
 .container:after,
