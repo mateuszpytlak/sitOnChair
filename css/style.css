@@ -129,9 +129,9 @@ nav ul li:last-child {
 
 /*----------ROZWIJANA CZĘŚć NAWIGACJI---------*/
 
-#dropdown {
+.dropdown {
     display: none;
-    top: 42px;
+    top: 41px;
     left: 0;
     z-index: 1;
     text-transform: none;
@@ -139,7 +139,15 @@ nav ul li:last-child {
     line-height: 1em;
 }
 
-#dropdown li {
+.galeria.dropdown {
+    left: 123px;
+}
+
+.kontakt.dropdown {
+    left: 246px;
+}
+
+.dropdown li {
     height: 32.5px;
     line-height: 2.5em;
     display: block;
@@ -147,18 +155,17 @@ nav ul li:last-child {
     width: 123px;
 }
 
-#dropdown a {
+.dropdown a {
     font-size: 14px;
     letter-spacing: 0;
     font-weight: 600;
 }
 
-ul.menu li:hover ul#dropdown{
-    display: block;
+ul.menu li ul.dropdown{
     position: absolute;
 }
 
-ul.menu li:hover > ul#dropdown::before {
+ul.menu li > ul.dropdown::before {
     display: block;
     position: relative;
     content: "";
@@ -247,6 +254,7 @@ ul.menu li:hover > ul#dropdown::before {
 
 .secondSection {
     height: 350px;
+    transition: 1s all;
 }
 
 .secondSection article {
