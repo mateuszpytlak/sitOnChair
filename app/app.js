@@ -67,6 +67,41 @@ function init() {
 
     //-------------- KONIEC Ukrywanie napisów na zdjeciach w sekcji DWA
 
+    //-------------- SLIDER
+
+    const nextBtn = document.querySelector('.more');
+    const prevBtn = document.querySelector('.less');
+    const liElements = document.querySelectorAll('.slider li');
+
+    var count = 0;
+
+    liElements[0].classList.add('visible');
+
+    function showNext() {
+        liElements[count].classList.remove('visible');
+        count++;
+        if(count >= liElements.length) {
+            count = 0;
+        }
+        liElements[count].classList.add('visible');
+    }
+
+    function showPrev() {
+        liElements[count].classList.remove('visible');
+        count--;
+        if(count < 0) {
+            count = liElements.length - 1;
+        }
+        liElements[count].classList.add('visible');
+    }
+
+
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+
+    //-------------- SLIDER END
+
+
 }
 
 

@@ -179,11 +179,20 @@ ul.menu li > ul.dropdown::before {
 
 /*------------PIERWSZA SEKCJA-----------*/
 
+.slider li{
+    display: none;
+}
+
+.slider .visible {
+    display: inline-block;
+}
+
 .less,
 .more {
     margin-top: 200px;
     font-weight: 100;
     font-size: 90px;
+    cursor: pointer;
 }
 
 .less {
@@ -202,7 +211,7 @@ ul.menu li > ul.dropdown::before {
     position: relative;
 }
 
-.chair_photo {
+#chair_photo1 {
     background-image: url('../images/black_chair.png');
     background-position: center;
     background-size: cover;
@@ -210,6 +219,16 @@ ul.menu li > ul.dropdown::before {
     width: 420px;
     float: left;
     margin-top: 70px;
+}
+
+#chair_photo2 {
+    background-image: url(../images/red_chair.png);
+    background-position: center;
+    background-size: cover;
+    height: 332px;
+    width: 420px;
+    float: left;
+    margin-top: 124px;
 }
 
 .banner {
