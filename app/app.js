@@ -47,7 +47,7 @@ function init() {
     const chairMargaritaDiv = chairMargarita.querySelector('div');
 
     function hideBackground(e) {
-        if(e.target === chairClair) {
+        if (e.target === chairClair) {
             chairClairDiv.style.display = 'none';
         } else if (e.target === chairMargarita) {
             chairMargaritaDiv.style.display = 'none';
@@ -80,7 +80,7 @@ function init() {
     function showNext() {
         liElements[count].classList.remove('visible');
         count++;
-        if(count >= liElements.length) {
+        if (count >= liElements.length) {
             count = 0;
         }
         liElements[count].classList.add('visible');
@@ -89,7 +89,7 @@ function init() {
     function showPrev() {
         liElements[count].classList.remove('visible');
         count--;
-        if(count < 0) {
+        if (count < 0) {
             count = liElements.length - 1;
         }
         liElements[count].classList.add('visible');
@@ -101,8 +101,24 @@ function init() {
 
     //-------------- SLIDER END
 
+    //-------------- APPLICATION START
+
+    const formBtn = document.querySelectorAll('section.choice_part div.form span.list_arrow');
+
+    function toggleList() {
+        console.log(this.nextElementSibling);
+        console.log('pyk');
+        var ul = this.nextElementSibling;
+        ul.classList.toggle('hidden');
+    }
+
+
+    for (let i = 0; i < formBtn.length; i++)
+        formBtn[i].addEventListener('click', toggleList)
+
+
+    //---------------- APPLICATION END
 
 }
-
 
 document.addEventListener('DOMContentLoaded', init);
