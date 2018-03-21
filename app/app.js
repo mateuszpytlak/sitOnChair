@@ -103,19 +103,101 @@ function init() {
 
     //-------------- APPLICATION START
 
+        //dropdown list
+
     const formBtn = document.querySelectorAll('section.choice_part div.form span.list_arrow');
 
     function toggleList() {
-        console.log(this.nextElementSibling);
-        console.log('pyk');
-        var ul = this.nextElementSibling;
+        const ul = this.nextElementSibling;
         ul.classList.toggle('hidden');
     }
 
 
-    for (let i = 0; i < formBtn.length; i++)
+    for (var i = 0; i < formBtn.length; i++) {
         formBtn[i].addEventListener('click', toggleList)
+    }
 
+        // END dropdown list
+
+        // pick options
+
+    const liChairType = document.querySelectorAll('ul#chairType li');
+    const liColorType = document.querySelectorAll('ul#colorType li');
+    const liMaterialType = document.querySelectorAll('ul#materialType li');
+    // const checkboxTransport = document.querySelector('input#transport');
+
+    const summaryChairType = document.querySelector('div.summary_panel h4');
+    const summaryColorType = document.querySelector('div.summary_panel span.color');
+    const summaryMaterialType = document.querySelector('div.summary_panel span.pattern');
+    // const summaryTransport = document.querySelector('div.summary_panel span.transport');
+
+    const valueChairType = document.querySelector('div.summary_panel h4.value');
+    const valueColorType = document.querySelector('div.summary_panel span.color.value');
+    const valueMaterialType = document.querySelector('div.summary_panel span.pattern.value');
+    // const valueTransport = document.querySelector('div.summary_panel span.transport.value');
+
+    var sum = document.querySelector('div.sum strong');
+
+    sum.dataset.typeValue = '0';
+    sum.dataset.colorValue = '0';
+    sum.dataset.materialValue = '0';
+    sum.dataset.transportValue = '0';
+
+    var chairType;
+    var colorType;
+    var materialType;
+
+    function pickOption1() {
+        chairType = this.textContent;
+        summaryChairType.textContent = 'Chair ' + chairType;
+        valueChairType.textContent = this.dataset.price;
+        sum.dataset.typeValue = this.dataset.price;
+        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue);
+        const ul = this.parentElement;
+        ul.classList.toggle('hidden');
+    }
+    function pickOption2() {
+        colorType = this.textContent;
+        summaryColorType.textContent = colorType;
+        valueColorType.textContent = this.dataset.price;
+        sum.dataset.colorValue = this.dataset.price;
+        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue);
+        const ul = this.parentElement;
+        ul.classList.toggle('hidden');
+    }
+    function pickOption3() {
+        materialType = this.textContent;
+        summaryMaterialType.textContent = materialType;
+        valueMaterialType.textContent = this.dataset.price;
+        sum.dataset.materialValue = this.dataset.price;
+        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue);
+        const ul = this.parentElement;
+        ul.classList.toggle('hidden');
+    }
+
+
+    for(var i = 0; i < liChairType.length; i++) {
+        liChairType[i].addEventListener('click', pickOption1);
+    }
+    for(var i = 0; i < liColorType.length; i++) {
+        liColorType[i].addEventListener('click', pickOption2);
+    }
+    for(var i = 0; i < liMaterialType.length; i++) {
+        liMaterialType[i].addEventListener('click', pickOption3);
+    }
+
+    // function checkBox() {
+    //     // if(checkboxTransport.checked = true) {
+    //     //     summaryTransport.textContent = parseInt(checkboxTransport.dataset.transportPrice);
+    //     // } else if(checkboxTransport.checked = false) {
+    //     //     summaryTransport.textContent = '';
+    //     // }
+    // }
+    //
+    // checkboxTransport.addEventListener('click', checkBox);
+
+
+    // END pick options
 
     //---------------- APPLICATION END
 
