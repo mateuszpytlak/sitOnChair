@@ -124,17 +124,17 @@ function init() {
     const liChairType = document.querySelectorAll('ul#chairType li');
     const liColorType = document.querySelectorAll('ul#colorType li');
     const liMaterialType = document.querySelectorAll('ul#materialType li');
-    // const checkboxTransport = document.querySelector('input#transport');
+    const checkboxTransport = document.querySelector('input#transport');
 
     const summaryChairType = document.querySelector('div.summary_panel h4');
     const summaryColorType = document.querySelector('div.summary_panel span.color');
     const summaryMaterialType = document.querySelector('div.summary_panel span.pattern');
-    // const summaryTransport = document.querySelector('div.summary_panel span.transport');
+    const summaryTransport = document.querySelector('div.summary_panel span.transport');
 
     const valueChairType = document.querySelector('div.summary_panel h4.value');
     const valueColorType = document.querySelector('div.summary_panel span.color.value');
     const valueMaterialType = document.querySelector('div.summary_panel span.pattern.value');
-    // const valueTransport = document.querySelector('div.summary_panel span.transport.value');
+    const valueTransport = document.querySelector('div.summary_panel span.transport.value');
 
     var sum = document.querySelector('div.sum strong');
 
@@ -152,7 +152,7 @@ function init() {
         summaryChairType.textContent = 'Chair ' + chairType;
         valueChairType.textContent = this.dataset.price;
         sum.dataset.typeValue = this.dataset.price;
-        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue);
+        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue) + parseInt(valueTransport.dataset.transportPrice);
         const ul = this.parentElement;
         ul.classList.toggle('hidden');
     }
@@ -161,7 +161,7 @@ function init() {
         summaryColorType.textContent = colorType;
         valueColorType.textContent = this.dataset.price;
         sum.dataset.colorValue = this.dataset.price;
-        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue);
+        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue) + parseInt(valueTransport.dataset.transportPrice);
         const ul = this.parentElement;
         ul.classList.toggle('hidden');
     }
@@ -170,11 +170,10 @@ function init() {
         summaryMaterialType.textContent = materialType;
         valueMaterialType.textContent = this.dataset.price;
         sum.dataset.materialValue = this.dataset.price;
-        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue);
+        sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue) + parseInt(valueTransport.dataset.transportPrice);
         const ul = this.parentElement;
         ul.classList.toggle('hidden');
     }
-
 
     for(var i = 0; i < liChairType.length; i++) {
         liChairType[i].addEventListener('click', pickOption1);
@@ -186,15 +185,23 @@ function init() {
         liMaterialType[i].addEventListener('click', pickOption3);
     }
 
-    // function checkBox() {
-    //     // if(checkboxTransport.checked = true) {
-    //     //     summaryTransport.textContent = parseInt(checkboxTransport.dataset.transportPrice);
-    //     // } else if(checkboxTransport.checked = false) {
-    //     //     summaryTransport.textContent = '';
-    //     // }
-    // }
-    //
-    // checkboxTransport.addEventListener('click', checkBox);
+
+    function checkBox() {
+        if (summaryTransport.textContent == '') {
+            summaryTransport.textContent = 'transport';
+            valueTransport.dataset.transportPrice = checkboxTransport.dataset.transportPrice;
+            valueTransport.textContent = valueTransport.dataset.transportPrice
+            sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue) + parseInt(valueTransport.dataset.transportPrice);
+        } else if (summaryTransport.textContent == 'transport') {
+            summaryTransport.textContent = '';
+            valueTransport.textContent = '';
+            valueTransport.dataset.transportPrice = 0;
+            sum.textContent = parseInt(sum.dataset.typeValue) + parseInt(sum.dataset.colorValue) + parseInt(sum.dataset.materialValue) + parseInt(valueTransport.dataset.transportPrice);
+        }
+    }
+
+
+    checkboxTransport.addEventListener('click', checkBox);
 
 
     // END pick options
